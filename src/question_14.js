@@ -19,17 +19,17 @@ const changeNameEmail = (arr) => {
       // 7. variabel berisi nilai domain baru
       let domainBinar = '@binar.org';
       // 8. variabel yang berisi string kosng (secara default)
-      let namaEmail = '';
-      let emailBaru = '';
+      let nameEmail = '';
+      let newEmail = '';
 
       // 9.jika karakter sama dengan @
       if (arr[i].email[j] === '@') {
-        // 9. ubah nilai namaEmail hasil dari sliceManual yang dimulai dari index 0 sampai index sebelum tanda @
-        namaEmail = sliceManual([arr[i].email], 0, j);
-        // 10. ubah nilai emailBaru hasil dari penggabungan namaEmail dan domainBinar
-        emailBaru = namaEmail + domainBinar;
-        // 11. ubah nilai email user menjadi emailBaru
-        arr[i].email = emailBaru;
+        // 9. ubah nilai nameEmail hasil dari sliceManual yang dimulai dari index 0 sampai index sebelum tanda @
+        nameEmail = sliceManual([arr[i].email], 0, j);
+        // 10. ubah nilai newEmail hasil dari penggabungan nameEmail dan domainBinar
+        newEmail = nameEmail + domainBinar;
+        // 11. ubah nilai email user menjadi newEmail
+        arr[i].email = newEmail;
         // 12. masukan data user ke variabel result
         result.push(arr[i]);
 

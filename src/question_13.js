@@ -17,21 +17,21 @@ const changePositionName = (arr) => {
     // 6. melakukan perulangan satu per satu karakter nama
     for (let j = 0; j < nameLen; j++) {
       // 7. membuat variabel berisi string kosong (secara default)
-      let namaDepan = '';
-      let namaBelakang = '';
+      let firtName = '';
+      let lastName = '';
 
       // 8.jika karakter sama dengan spasi
       if (arr[i].name[j] === ' ') {
-        // 9. ubah nilai namaDepan hasil dari sliceManual yang dimulai dari index 0 sampai index sebelum spasi
-        namaDepan = sliceManual([arr[i].name], 0, j);
+        // 9. ubah nilai firtName hasil dari sliceManual yang dimulai dari index 0 sampai index sebelum spasi
+        firtName = sliceManual([arr[i].name], 0, j);
 
-        // 10. ubah nilai namaBelakang hasi dari sliceManual yang dimulai setelah spasi sampai index akhir nama
-        namaBelakang = sliceManual([arr[i].name], j + 1, nameLen);
+        // 10. ubah nilai lastName hasi dari sliceManual yang dimulai setelah spasi sampai index akhir nama
+        lastName = sliceManual([arr[i].name], j + 1, nameLen);
 
-        // 11. tuker posisi namaBelakang jadi ada didepan dan namaDepan ada di belakang
-        let namaTukar = `${namaBelakang} ${namaDepan}`;
-        // 12. ubah nilai nama user menjadi namaTukar
-        arr[i].name = namaTukar;
+        // 11. tuker posisi lastName jadi ada didepan dan firtName ada di belakang
+        let reverseName = `${lastName} ${firtName}`;
+        // 12. ubah nilai nama user menjadi reverseName
+        arr[i].name = reverseName;
 
         // 13. masukan data user ke variabel result
         result.push(arr[i]);
